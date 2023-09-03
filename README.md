@@ -1,6 +1,41 @@
 # Cosmos Surge 
 
+![favicon.ico](favicon.ico)
+
 Cosmos Surge is a straightforward tool for managing Azure Cosmos DB instances.
+
+![main.png](readme%2Fimage%2Fmain.png)
+
+## Usage Instructions
+
+### 1. Downloading the Client / クライアントのダウンロード / 下载客户端:
+
+* Download the client from the provided link.
+提供されたリンクからクライアントをダウンロードします。
+从提供的链接下载客户端。
+  * [Releases](https://github.com/Sun-June/cosmos-surge/releases)
+* Install the client on your system.
+システムにクライアントをインストールします。
+安装客户端到您的系统。
+* Launch the application and start using it.
+アプリケーションを起動し、使用を開始します。
+启动应用程序并开始使用。
+
+### 2. Using Docker / Docker の使用 / 采用 Docker 模式进行运行:
+
+* Ensure you have Docker installed on your system.
+システムに Docker がインストールされていることを確認します。
+确保您的系统已安装 Docker。
+* Pull the Cosmos Surge Tool image from Docker Hub.
+Docker Hub から Cosmos Surge Tool イメージを取得します。
+从 Docker Hub 拉取 Cosmos Surge Tool 镜像。
+  * `docker pull sunjune/cosmos-surge:latest`
+* Run the tool within a Docker container.
+Docker コンテナ内でツールを実行します。
+在 Docker 容器中运行工具。
+  * `docker run --name cosmos-surge -d -p 1212:9999 sunjune/cosmos-surge`
+* Final Step: Open Your Browser and Visit / 最後のステップでは、ウェブブラウザを開き / 最后一步，打开您的网络浏览器
+  * http://localhost:1212
 
 ## features:
 
@@ -65,4 +100,3 @@ Cosmos Surge 是一个简单但强大的工具，旨在使 Azure Cosmos DB 数�
 
 * 批量导入数据：如果您需要将当前查询结果批量导入到其他容器，Cosmos Surge 也提供了这个功能。这对于数据的迁移和整理非常有用。
 
-## 使用指南
