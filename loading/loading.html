@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="../logo/logo.ico" />
+    <title>Cosmos Surge</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            align-items: center;
+            background-color: #f4f2f0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .loader  {
+            animation: rotate 1s infinite;
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            top: 50px;
+        }
+
+        .loader:before,
+        .loader:after {
+            border-radius: 50%;
+            content: '';
+            display: block;
+            height: 20px;
+            width: 20px;
+        }
+        .loader:before {
+            animation: ball1 1s infinite;
+            background-color: #cb2025;
+            box-shadow: 30px 0 0 #f8b334;
+            margin-bottom: 10px;
+        }
+        .loader:after {
+            animation: ball2 1s infinite;
+            background-color: #00a096;
+            box-shadow: 30px 0 0 #97bf0d;
+        }
+
+        @keyframes rotate {
+            0% {
+                -webkit-transform: rotate(0deg) scale(0.8);
+                -moz-transform: rotate(0deg) scale(0.8);
+            }
+            50% {
+                -webkit-transform: rotate(360deg) scale(1.2);
+                -moz-transform: rotate(360deg) scale(1.2);
+            }
+            100% {
+                -webkit-transform: rotate(720deg) scale(0.8);
+                -moz-transform: rotate(720deg) scale(0.8);
+            }
+        }
+
+        @keyframes ball1 {
+            0% {
+                box-shadow: 30px 0 0 #f8b334;
+            }
+            50% {
+                box-shadow: 0 0 0 #f8b334;
+                margin-bottom: 0;
+                -webkit-transform: translate(15px,15px);
+                -moz-transform: translate(15px, 15px);
+            }
+            100% {
+                box-shadow: 30px 0 0 #f8b334;
+                margin-bottom: 10px;
+            }
+        }
+
+        @keyframes ball2 {
+            0% {
+                box-shadow: 30px 0 0 #97bf0d;
+            }
+            50% {
+                box-shadow: 0 0 0 #97bf0d;
+                margin-top: -20px;
+                -webkit-transform: translate(15px,15px);
+                -moz-transform: translate(15px, 15px);
+            }
+            100% {
+                box-shadow: 30px 0 0 #97bf0d;
+                margin-top: 0;
+            }
+        }
+
+        .bounce {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            font: normal bold 6rem "Product Sans", sans-serif;
+            white-space: nowrap;
+        }
+
+        .letter {
+            -webkit-animation: bounce 0.75s cubic-bezier(0.05, 0, 0.2, 1) infinite alternate;
+            animation: bounce 0.75s cubic-bezier(0.05, 0, 0.2, 1) infinite alternate;
+            display: inline-block;
+            transform: translate3d(0, 0, 0);
+            margin-top: 0.5em;
+            text-shadow: rgba(0, 0, 0, 0.4) 0 0 0.05em;
+            font: normal bold 6rem "Product Sans", sans-serif;
+        }
+        .letter:nth-child(1) {
+            -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+            color: #cb2025;
+        }
+        .letter:nth-child(2) {
+            -webkit-animation-delay: 0.0833333333s;
+            animation-delay: 0.0833333333s;
+            color: #f8b334;
+        }
+        .letter:nth-child(3) {
+            -webkit-animation-delay: 0.1666666667s;
+            animation-delay: 0.1666666667s;
+            color: #00a096;
+        }
+        .letter:nth-child(4) {
+            -webkit-animation-delay: 0.25s;
+            animation-delay: 0.25s;
+            color: #97bf0d;
+        }
+        .letter:nth-child(5) {
+            -webkit-animation-delay: 0.3333333333s;
+            animation-delay: 0.3333333333s;
+            color: #34a853;
+        }
+        .letter:nth-child(6) {
+            -webkit-animation-delay: 0.4166666667s;
+            animation-delay: 0.4166666667s;
+            color: #346cf8;
+        }
+
+        .letter:nth-child(8) {
+            -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+            color: #cb2025;
+        }
+        .letter:nth-child(9) {
+            -webkit-animation-delay: 0.0833333333s;
+            animation-delay: 0.0833333333s;
+            color: #f8b334;
+        }
+        .letter:nth-child(10) {
+            -webkit-animation-delay: 0.1666666667s;
+            animation-delay: 0.1666666667s;
+            color: #00a096;
+        }
+        .letter:nth-child(11) {
+            -webkit-animation-delay: 0.25s;
+            animation-delay: 0.25s;
+            color: #97bf0d;
+        }
+        .letter:nth-child(12) {
+            -webkit-animation-delay: 0.3333333333s;
+            animation-delay: 0.3333333333s;
+            color: #34a853;
+        }
+
+
+        @-webkit-keyframes bounce {
+            0% {
+                transform: translate3d(0, 0, 0);
+                text-shadow: rgba(0, 0, 0, 0.4) 0 0 0.05em;
+            }
+            100% {
+                transform: translate3d(0, -1em, 0);
+                text-shadow: rgba(0, 0, 0, 0.4) 0 1em 0.35em;
+            }
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translate3d(0, 0, 0);
+                text-shadow: rgba(0, 0, 0, 0.4) 0 0 0.05em;
+            }
+            100% {
+                transform: translate3d(0, -1em, 0);
+                text-shadow: rgba(0, 0, 0, 0.4) 0 1em 0.35em;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="bounce">
+    <span class="letter">C</span>
+    <span class="letter">o</span>
+    <span class="letter">s</span>
+    <span class="letter">m</span>
+    <span class="letter">o</span>
+    <span class="letter">s</span>
+    <span class="letter">&nbsp;</span>
+    <span class="letter">S</span>
+    <span class="letter">u</span>
+    <span class="letter">r</span>
+    <span class="letter">g</span>
+    <span class="letter">e</span>
+</div>
+<!--<div class="loader"></div>-->
+</body>
+</html>

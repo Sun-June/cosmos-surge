@@ -1,0 +1,58 @@
+{
+  "name": "CosmosSurge",
+  "version": "1.0.0",
+  "author": {
+    "name": "SunJune",
+    "email": "xjwssjun@gmail.com"
+  },
+  "license": "SSPL",
+  "description": "A simple tool for managing Azure Cosmos DB.",
+  "main": "main.js",
+  "scripts": {
+    "start": "tsc && NODE_TLS_REJECT_UNAUTHORIZED=0 electron .",
+    "docker": "tsc && docker build -t sunjune/cosmos-surge .",
+    "package:mac": "tsc && electron-builder -m",
+    "package:win": "tsc && electron-builder -w"
+  },
+  "dependencies": {
+    "@azure/cosmos": "^3.17.3",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "electron": "^26.1.0",
+    "electron-builder": "^24.6.3"
+  },
+  "build": {
+    "asar": false,
+    "files": [
+      "build/**/*",
+      "static/**/*",
+      "loading/**/*",
+      "logo/**/*",
+      "main.js",
+      "package.json"
+    ],
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": "arm64"
+        },
+        {
+          "target": "dmg",
+          "arch": "x64"
+        }
+      ],
+      "icon": "logo/logo.icns"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": "x64"
+        }
+      ],
+      "icon": "logo/logo.ico"
+    }
+  }
+}

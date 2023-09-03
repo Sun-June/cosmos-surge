@@ -1,0 +1,73 @@
+Server Side Public License (SSPL) Version 1.0
+
+1. Definitions.
+
+1.1. "Commercial Use" means distribution or otherwise making the Covered Software available to a third party.
+
+1.2. "Covered Software" means the User or any sublicensor's proprietary software that is licensed under the terms of this License.
+
+1.3. "Deploy" means to use, offer to use, run, or provide access to, Covered Software as part of providing a service, whether or not a fee is charged.
+
+1.4. "External Deployment" means Deploying Covered Software on a Server running a system other than Covered Software that is not Licensed under this License.
+
+1.5. "Internal Deployment" means Deploying Covered Software within the User's organization.
+
+1.6. "Purposely Using" means Deploying the Covered Software with the primary purpose of causing it to become subject to the terms of this License.
+
+1.7. "Service" means a set of network-accessible functions or features that are provided by a Party to a third party.
+
+1.8. "Sublicense" means to grant a license to use, perform, display, or otherwise access or deploy the Covered Software.
+
+1.9. "Valid License" means a license that has been authorized by User through the process communicated by the User for Deploying the Covered Software.
+
+2. Additional Terms.
+
+2.1. Proprietary Rights. User acknowledges that the Covered Software contains proprietary information and Intellectual Property of User. User shall use its best efforts to preserve and protect the proprietary rights of User and all intellectual property rights therein. User shall promptly notify User if User becomes aware of any unauthorized access to, or use or copying of, the Covered Software.
+
+2.2. User Access. User shall ensure that its Users agree to comply with, and be bound by, the terms of this License, including but not limited to, the obligation not to Deploy the Covered Software except as authorized under this License.
+
+2.3. Support Services. User shall provide sufficient contact information, preferably a valid email address, to permit Users to contact User for customer support in connection with the Covered Software. User shall respond promptly to inquiries and use commercially reasonable efforts to resolve issues. User may provide support services to Users in connection with the Covered Software. Such support services may be subject to a separate agreement.
+
+2.4. Bug Reports. User shall provide to User any bug reports submitted by Users.
+
+2.5. Sublicensing and External Deployment.
+
+2.5.1. If User Sublicenses the Covered Software, User shall include a copy of this License with each such sublicense.
+
+2.5.2. If User Deployed the Covered Software in an External Deployment, User shall make the Covered Software available for a fee that is no more than User's cost of distribution.
+
+3. Grant of Rights.
+
+3.1. Copyright Grant. User hereby grants to User and all Users a world-wide, royalty-free, non-exclusive license, subject to the terms of this License, to do the following:
+
+3.1.1. to reproduce, analyze, and modify the Covered Software, as well as to reproduce, analyze, and modify any derivative works thereof,
+
+3.1.2. to reproduce and Deploy the Covered Software and any derivative works thereof, and
+
+3.1.3. to reproduce and sublicense the Covered Software and any derivative works thereof; and
+
+3.1.4. User grants to User and all Users a world-wide, royalty-free, non-exclusive license, subject to the terms of this License, to do the following:
+
+3.1.5. to use, reproduce, Deploy, reproduce and sublicense the Covered Software for the purpose of allowing Users to use the Covered Software in accordance with the terms of this License.
+
+3.1.6. User grants to User and all Users a world-wide, royalty-free, non-exclusive license, subject to the terms of this License, to reproduce and display the Covered Software, as well as any derivative works thereof, and to reproduce and display any associated documentation.
+
+4. Inability to Comply Due to Statute or Regulation.
+
+If it is impossible for the User to comply with any of the terms of this License with respect to some or all of the Covered Software due to statute or regulation, then any Licensor shall:
+
+4.1. not be responsible for it; and
+
+4.2. not be subject to any liability with respect to it.
+
+5. Termination.
+
+5.1. Termination by User. User may terminate its licenses under this License at any time by destroying or disposing of all copies of the Covered Software in User's possession, whether in physical or electronic format.
+
+5.2. Termination by User. User may terminate any Sublicense at any time by terminating User's Subsidiary's or Users' right to Deploy the Covered Software. User may also terminate a license and/or sublicense with respect to all Users immediately upon written notice to any User if User's primary purpose for Deploying the Covered Software is to cause it to become subject to the terms of this License, regardless of the date on which User first Deployed the Covered Software.
+
+5.3. Termination by User. User may terminate a license and/or sublicense if:
+
+5.3.1. a User breaches any of the terms of this License; or
+
+5.3.2. User is notified in writing

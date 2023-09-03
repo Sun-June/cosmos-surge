@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "lib": ["ESNext", "DOM"],
+        "target": "ESNext",
+        "module": "commonjs",
+        "moduleResolution":"node",
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "sourceMap": false,
+        "outDir": "./build",
+        // "outFile": "./build/index.js",
+    },
+    "include": ["src"],
+    "exclude": ["node_modules", "build"]
+}
