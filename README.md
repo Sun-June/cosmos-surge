@@ -37,6 +37,14 @@ Docker コンテナ内でツールを実行します。
 * Final Step: Open Your Browser and Visit / 最後のステップでは、ウェブブラウザを開き / 最后一步，打开您的网络浏览器
   * http://localhost:1212
 
+## Local Development Steps:
+
+* To run the frontend, please refer to the [cosmos-surge-view](https://github.com/Sun-June/cosmos-surge-view) project for instructions.
+* Clone the project and execute `npm install`.
+* Start local development with `npm run start`.
+
+These are the steps to set up and begin local development.
+
 ## features:
 
 * Multi-Instance Management: Seamlessly manage data from multiple Cosmos DB instances through a single interface.
