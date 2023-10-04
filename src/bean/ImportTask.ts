@@ -28,6 +28,9 @@ interface ImportTask {
 
     message?: string
 
+    stop?:boolean
+
+    cancel?: boolean
 }
 
 export default ImportTask

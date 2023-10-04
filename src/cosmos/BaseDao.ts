@@ -32,7 +32,7 @@ class BaseDao {
         const endKey = connectionString.endsWith(';') ? connectionString.length - 1 : connectionString.length;
         const key = connectionString.substring(end, endKey);
 
-        const cosmosClient = new CosmosClient({endpoint, key, connectionPolicy: {requestTimeout: 30000}});
+        const cosmosClient = new CosmosClient({endpoint, key, connectionPolicy: {requestTimeout: 10000}});
 
         this.clientInfo = new ClientInfo(id, connectionString, cosmosClient);
         this.clientInfo.linkName = name;

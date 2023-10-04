@@ -7,11 +7,14 @@ import Log from "../tool/Log";
 class ImportDataService {
 
     public static readonly tasks: ImportTask[] = []
+
+    private static readonly taskMap: Map<string, ImportTask> = new Map();
     
     public static async createAndStart(task: ImportTask): Promise<ImportTask> {
         task.id = new Date().getTime().toString();
         task.status = "init";
         this.tasks.push(task);
+        this.taskMap.set(task.id, task);
         this.runTask(task);
         return task;
     }
@@ -30,6 +33,21 @@ class ImportDataService {
             do {
                 task.total = await this.countTask(task);
                 datas = await this.pageTodo(task, page, pageSize);
+                // if (task.type === "upsert") {
+                //     try {
+                //         for (const data of datas) {
+                //             const partitionName = data[fromPartition] as string
+                //             delete data[fromPartition]
+                //             data[toPartition] = partitionName;
+                //         }
+                //         await OperationDao.batchUpsert(task.toId, datas)
+                //     } catch (e) {
+                //         Log.error("batch has error", e)
+                //         task.error += datas.length;
+                //     }
+                //     task.process += datas.length;
+                //
+                // } else {
                 for (const data of datas) {
                     try {
                         const partitionName = data[fromPartition] as string
@@ -54,6 +72,14 @@ class ImportDataService {
                 }
                 page++;
 
+                while (task.stop) {
+                    await this.sleep(1000);
+                }
+                if (task.cancel) {
+                    task.message = "cancel"
+                    break;
+                }
+
             } while (datas.length >= pageSize)
 
         } catch (e) {
@@ -65,6 +91,29 @@ class ImportDataService {
         this.deleteDelay(task);
 
         return task;
+    }
+
+    public static changeStop(id: string): ImportTask {
+        const task = this.taskMap.get(id);
+        if (task) {
+            task.stop = !task.stop;
+            return task;
+        }
+        return null
+    }
+
+    public static cancel(id: string): ImportTask {
+        const task = this.taskMap.get(id);
+        if (task) {
+            task.cancel = true;
+            task.stop = false;
+            return task;
+        }
+        return null;
+    }
+
+    private static async sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
     }
 
     private static deleteDelay(task: ImportTask) {

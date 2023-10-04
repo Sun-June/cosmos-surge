@@ -1,12 +1,12 @@
 {
   "name": "cosmos-surge",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "main.js",
   "description": "cosmos-surge",
   "scripts": {
     "start": "NODE_TLS_REJECT_UNAUTHORIZED=0 node main.js"
   },
   "dependencies": {
-    "@azure/cosmos": "^3.17.3"
+    "@azure/cosmos": "^4.0.0"
   }
 }
